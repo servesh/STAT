@@ -13,5 +13,7 @@ if test -n "$PYTHONPATH" ; then
 else
     export PYTHONPATH=@pythondir@:@pyexecdir@:@PYTHONPATH@
 fi
-
+export LIBALPS_ENABLE_DSL=1
+export STAT_DAEMON_PATH=$prefix/bin/STATD
+export STAT_FILTER_PATH=$prefix/lib/STAT_FilterDefinitions.so
 exec @STATPYTHON@ @pythondir@/STATmain.py view $@
