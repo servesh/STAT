@@ -2,6 +2,8 @@
 #include "common_tools_be.h"
 #include <fstream>
 #include <sstream>
+#include <array>
+#include <string>
 
 STAT_ctiBackEnd::STAT_ctiBackEnd(StatDaemonLaunch_t launchType)
     : STAT_BackEnd(launchType)

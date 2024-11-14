@@ -13,15 +13,6 @@ endif
 AM_LDFLAGS = $(CODE_COVERAGE_LIBS)
 
 include_HEADERS = STAT.h STAT_FrontEnd.h STAT_BackEnd.h STAT_timer.h STAT_GraphRoutines.h STAT_IncMRNet.h MRNetSymbolReader.h STAT_CircularLogs.h 
-if ENABLE_DYSECTAPI
-stat_cppflags_add_dysectapi = -I$(abs_top_srcdir)/src -I$(abs_top_srcdir)/src/dysect -I$(abs_top_srcdir)/src/dysect/libDysectAPI/include
-stat_fe_ldadd_add_dysectapi = @LIBDYSECTAPIFE@ @LIBDYSECTFE@
-stat_fe_cppflags_add_dysectapi = -D__DYSECT_IS_FRONTEND
-stat_be_ldadd_add_dysectapi = @LIBDYSECTAPIBE@ @LIBDYSECTBE@
-stat_fd_ldadd_add_dysectapi = @LIBDYSECTAPIFD@
-stat_ldflags_add_dysectapi = -L@LIBDYSECTAPILOC@ -L@LIBDYSECTLOC@
-##-L/collab/usr/global/tools/dyninst/stackwalker/chaos_5_x86_64_ib/sw8.2-1/lib
-endif
 
 if ENABLE_STATBENCH
 stat_bin_programs_statbench = STATBenchbin STATBenchD

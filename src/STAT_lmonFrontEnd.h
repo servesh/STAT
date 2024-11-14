@@ -57,7 +57,6 @@ private:
     */
     StatError_t validateApidWithCTI();
 
-<<<<<<< HEAD
     int lmonSession_;               /*!< the LaunchMON session ID */
     lmon_rm_info_t lmonRmInfo_;     /*!< the resource manager information from LMON */
     MPIR_PROCDESC_EXT *proctab_;    /*!< the process table */
